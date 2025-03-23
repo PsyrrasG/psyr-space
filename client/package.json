@@ -49,6 +49,8 @@
     "ajv": "^7.2.4",
     "tailwindcss": "^3.4.17"
   },
-
+  "engines": {
+    "node": ">=20.8.0"
+  },
   "proxy": "http://localhost:3000"
 }

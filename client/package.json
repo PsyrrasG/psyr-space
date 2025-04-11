@@ -13,8 +13,8 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.9",
     "framer-motion": "^12.4.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.1.5",
     "react-scripts": "^5.0.1",
@@ -52,5 +52,5 @@
   "engines": {
     "node": ">=20.8.0"
   },
-  "proxy": "http://localhost:3000"
+  "proxy": "https://psyr-space-backend.onrender.com"
 }

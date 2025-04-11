@@ -28,13 +28,13 @@ app.use(
   }),
 );
 
-// app.use(cors()); // allow all origins (not secure)
-app.use(
-  cors({
-    origin: "http://localhost:3000", // Allow requests from this origin
-    credentials: true, // Allow cookies and credentials (if needed)
-  })
-);
+app.use(cors()); // allow all origins (not secure)
+// app.use(
+//   cors({
+//     origin: "http://localhost:3000", // Allow requests from this origin
+//     credentials: true, // Allow cookies and credentials (if needed)
+//   })
+// );
 
 // Set up rate limiter: maximum of twenty requests per minute
 const RateLimit = require("express-rate-limit");
@@ -51,5 +51,10 @@ app.use("/api", contactRoutes)
 // Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  if (NODE_ENV == "production"){
+    console.log(`Server is listening on port:${PORT}`);
+  }
+  else {
+    console.log(`Server running on http://localhost:${PORT}`);
+  }
 });

@@ -52,5 +52,5 @@
   "engines": {
     "node": ">=20.8.0"
   },
-  "proxy": "https://psyr-space-backend.onrender.com"
+  "proxy": "psyr-space-backend.onrender.com"
 }

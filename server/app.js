@@ -23,7 +23,7 @@ app.use(compression()); // compress all routes
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
-      "script-src": ["'self'", "code.jquery.com", "cdn.jsdelivr.net"],
+      "script-src": ["self", "code.jquery.com", "cdn.jsdelivr.net"],
     },
   }),
 );
@@ -40,7 +40,7 @@ app.use(cors()); // allow all origins (not secure)
 const RateLimit = require("express-rate-limit");
 const limiter = RateLimit({
   windowMs: 1 * 60 * 1000, // 1 minute
-  max: 20,
+  max: 100,
 });
 // Apply rate limiter to all requests
 app.use(limiter);
@@ -58,3 +58,8 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
   }
 });
+
+// message to GET requests:
+app.get('/', (req, res) => {
+  res.send('Please visit gpsyrras.onrender.com')
+})

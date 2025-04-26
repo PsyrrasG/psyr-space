@@ -60,12 +60,12 @@ const OtherResourcesList = () => {
 
       <div className="space-y-4">
         {resourcesData.map((resource) => (
-          <motion.div key={resource.id} whileHover={{ y: 1 }} className="bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden">
+          <motion.div key={resource.id} whileHover={{ y: +1 }} className="bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden">
             {/* Title Section */}
             <motion.div
               onClick={() => toggleExpand(resource.id)}
               className="flex flex-row items-center gap-2 px-3 lg:px-6 py-4 cursor-pointer bg-gray-50 text-base lg:text-lg font-medium"
-              whileHover={{ scale: 1.00}}
+              whileHover={{ scale: 1.0 }}
               whileTap={{ scale: 1.0 }}
             >
                 {resource.icon}
@@ -78,18 +78,18 @@ const OtherResourcesList = () => {
                 <motion.div
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
-                  transition={{ duration: 1. }}
+                  transition={{ duration: 0. }}
                   className="p-6 bg-white"
                 >
-                  <p className="text-gray-700 mb-4">{resource.description}</p>
-                  <a
+                  <motion.p className="text-gray-700 mb-4">{resource.description}</motion.p>
+                  <motion.a
                     href={resource.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:underline"
                   >
                     Learn More
-                  </a>
+                  </motion.a>
                 </motion.div>
               )}
             </AnimatePresence>

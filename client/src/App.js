@@ -14,6 +14,10 @@ import ErrorMessage from './pages/ErrorMessage';
 export default function App() {
   return (
     <Router>
+      <head>
+        <title>Space - G.Psyrras</title>
+        <link rel="icon" href="psyr_space_logo.ico" />
+      </head>
       <div className="bg-white bg-cover bg-center bg-no-repeat flex flex-col min-h-screen font-sans">
         <Navbar />
         <Routes >

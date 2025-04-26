@@ -6,9 +6,6 @@ import OtherResourcesList from "../components/OtherResourcesList";
 export default function Suggestions() {
   return (
     <motion.div
-    //   initial={{ opacity: 0 }}
-    //   animate={{ opacity: 1 }}
-    //   transition={{ duration: 0.5 }}
       className="flex flex-col items-stretch w-full lg:w-2/3 mx-auto py-32 md:py-40 px-10 lg:px-0 font-Raleway"
     >
         <motion.div className='mb-10 text-base lg:text-xl'

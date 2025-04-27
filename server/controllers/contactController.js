@@ -15,7 +15,7 @@ const contactController = async (req, res) => {
     await sendEmail(
       email, // User's email
       "Thank you for contacting me!", // Subject
-      `Hi ${name},\n\nThank you for reaching out. I'll get back to you soon!\n\nBest,\n[George Psyrras]` // Body
+      `Hi ${name},\n\nThank you for reaching out. I'll get back to you soon!\n\nBest,\nGeorge Psyrras` // Body
     );
 
     res.status(200).json({ message: "Message sent successfully!" });

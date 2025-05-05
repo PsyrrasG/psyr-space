@@ -13,7 +13,7 @@ export default function Contact() {
         // console.log(formData)
         setLoading(true);
         try {
-            const response = await axios.post("/api/contact", formData);
+            const response = await axios.post("https://psyr-space-backend.onrender.com/api/contact", formData);
             if (response.status === 200) {
                 console.log('Succesfully sent email (frontend)');
                 navigate('/contact/success');

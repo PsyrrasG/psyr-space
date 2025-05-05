@@ -15,14 +15,11 @@ export default function Contact() {
         try {
             const response = await axios.post("https://psyr-space-backend.onrender.com/api/contact", formData);
             if (response.status === 200) {
-                console.log('Succesfully sent email (frontend)');
                 navigate('/contact/success');
             }
         } catch (error) {
-            console.error('Failed to send email (frontent)');
             navigate('/contact/error');
         } finally {
-            console.error('Anyway finally clause');
             setLoading(false);
         }
     };
